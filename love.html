@@ -15,7 +15,7 @@
 </head>
 
 <body>
-	
+	 <div style="display: block;text-align: left;color: #99BBFF;margin-left: 50px;margin-top:20px;font-size:14px;font-family:KaiTi;"><p><span>与你相识的第</span><span id="day" style="color: #FF3333;font-size:20px;font-family:SimHei"></span><span>天</span></p></div>
     <div id="mainDiv">
         <div id="content" style="width: 1110px; height: 625px; margin-top: 20px; margin-left: 245px;">
             <div id="code" style="margin-top: 50px;font-size:14px;">
@@ -108,6 +108,9 @@ google_ad_height = 50;
 			var vdo = $("video")[0];
 			vdo.muted = false;
 		}, false); 
-	
+		
+	var acquaintance_date = new Date(Date.parse('2022-01-23'.replace(/-/g, "/"))); 
+	var day = parseInt((new Date().getTime()-acquaintance_date.getTime())/1000/3600/24); 
+	$("#day").text(day);
 	</script>
 </body></html>
